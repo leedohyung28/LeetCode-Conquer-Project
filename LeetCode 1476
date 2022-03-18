@@ -1,0 +1,13 @@
+class SubrectangleQueries(object):
+
+    def __init__(self, rectangle):
+        self.rectangle = rectangle  # just __init__ it
+
+    def updateSubrectangle(self, row1, col1, row2, col2, newValue):
+        for j in range(row1, row2+1) :
+            for k in range(col1, col2+1) :
+                self.rectangle[j][k] = newValue
+                # just put it -> it can make more faster by numpy
+
+    def getValue(self, row, col):
+        return self.rectangle[row][col] # just return
