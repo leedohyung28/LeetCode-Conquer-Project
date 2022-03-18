@@ -1,0 +1,10 @@
+class Solution(object):
+    def numIdenticalPairs(self, nums):
+        nums.sort()                     # sorting makes calculate faster O(nlogn)
+        l = len(nums)                   # setting to easy
+        res = 0                         # res is 0
+        for i in range(l) :
+            for j in range(i+1, l) :    # check almost all things
+                if nums[i] == nums[j] : res += 1    # same is 1 point
+                else : break                        # not same needs new check
+        return res
